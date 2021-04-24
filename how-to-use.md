@@ -1,8 +1,40 @@
 
+<!--
+    Some meta information about this document:
+
+    * I use the GitHub flavor of markdown.
+    See [https://guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown) for how to use it.
+
+    * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
+    See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
+ -->
+
+
 [(back to main page)](README.md)
 
 
 # The Documentation Mode - How to use
+
+<!-- TOC -->
+
+- [Introduction](#introduction)
+- [Scenarios - Overview](#scenarios---overview)
+- [Scenarios - How to document something](#scenarios---how-to-document-something)
+    - [You have to schedule a new task](#you-have-to-schedule-a-new-task)
+    - [An already scheduled task has changed and needs documentation update](#an-already-scheduled-task-has-changed-and-needs-documentation-update)
+    - [A meeting happens or has happened](#a-meeting-happens-or-has-happened)
+    - [A meeting is about to happen in the near future, and you need to note done some topics for this meeting](#a-meeting-is-about-to-happen-in-the-near-future-and-you-need-to-note-done-some-topics-for-this-meeting)
+    - [Some know-how information arrives](#some-know-how-information-arrives)
+    - [You want to document some noteworthy event just for yourself ("diary scenario")](#you-want-to-document-some-noteworthy-event-just-for-yourself-diary-scenario)
+    - [You need to review and then move the information you have collected to the correct location](#you-need-to-review-and-then-move-the-information-you-have-collected-to-the-correct-location)
+    - [You need to Git commit and push something](#you-need-to-git-commit-and-push-something)
+- [Scenarios - How to find something back which you have documented earlier](#scenarios---how-to-find-something-back-which-you-have-documented-earlier)
+    - [What has happened so far, and what are your concrete tasks in the coming time periods?](#what-has-happened-so-far-and-what-are-your-concrete-tasks-in-the-coming-time-periods)
+    - [Which (unfinished) tasks are assigned to you at all?](#which-unfinished-tasks-are-assigned-to-you-at-all)
+    - [What happened so far for a given topic?](#what-happened-so-far-for-a-given-topic)
+    - [Which tags are there at all?](#which-tags-are-there-at-all)
+
+<!-- /TOC -->
 
 This document describes **several workflows for a small group of people
 working together** to
@@ -47,7 +79,7 @@ In fact I already had the chance to use this documentation mode approach in a (s
 Until end of 2020 a former colleague and I used this documentation mode all the time to coordinate our work and share information about what has been going on.
 
 
-## Scenarios
+## Scenarios - Overview
 
 This section defines the various steps we take for typical scenarios which require us to deal with documentation and planning.
 
@@ -97,14 +129,14 @@ There are two type of scenarios:
 Either you need to document something, or you need to find back something which you have documented in the past.
 
 
-### How to document something
+## Scenarios - How to document something
 
 In this section I describe the concrete workflow for grabbing information in various situations.
 
 **The last two subsections are very inportant because they describe how to shift your information to the correct location and how to use Git to properly publish (and backup it!).**
 
 
-#### You have to schedule a new task
+### You have to schedule a new task
 
 Most likely this is the most useful and used scenario:
 Someone (most likely: you) needs to perform a task.
@@ -125,7 +157,7 @@ Now you need to note down the details in such a way that you can use the tooling
 | 11  | Finish todo entry.                                                              | **"C-c C-c"**                                                                                   |
 
 
-#### An already scheduled task has changed and needs documentation update
+### An already scheduled task has changed and needs documentation update
 
 During normal lifetime of a scheduled task at least one change will happen:
 The work assigned to this task has been done, and we need to close it so that we no longer need to track it.
@@ -165,7 +197,7 @@ In this section we describe how we document all these types of changes.
     * Change the Org entry type from its previous value (e.g., "TODO") to "CANCELLED".
 
 
-#### A meeting happens or has happened
+### A meeting happens or has happened
 
 Typical examples for such meetings:
 phone call, email conversation, video conference, workshop, "another person just wants to quickly ask something".
@@ -186,7 +218,7 @@ It does not make a difference if such meeting was planned or not.
 | 8   | Finish meeting entry.                                                                            | **"C-c C-c"**                                                                   |
 
 
-#### A meeting is about to happen in the near future, and you need to note done some topics for this meeting
+### A meeting is about to happen in the near future, and you need to note done some topics for this meeting
 
 Sometimes, when a new meeting is coming up soon, you already have some topics/questions you would like discuss in that meeting.
 In that case, you can already reserve a spot to document these questions/topics accordingly so that you will not forget them until then.
@@ -206,7 +238,7 @@ Then, when the meeting actually happens, you can quickly change the entry type f
 * Hit **"S-RIGHT"** as often as needed until MEETING has been reached.
 
 
-#### Some know-how information arrives
+### Some know-how information arrives
 
 Typical examples for such information arrivals:
 You come across such information in the form of self-written text, or a link to an external document, or an attached file.
@@ -229,7 +261,7 @@ So, if you have some information which you find worth persisting, then you can c
 | 9   | Finish know-how entry.                                                                                | **"C-c C-c"**                                                                   |
 
 
-#### You want to document some noteworthy event just for yourself ("diary scenario")
+### You want to document some noteworthy event just for yourself ("diary scenario")
 
 If you have accomplished something which you want to note down for a possible later use or just for your memoires, then this diary scenario is the one for you.
 You can create a JOURNAL entry in which you just describe what you feel noteworthy.
@@ -250,7 +282,7 @@ You can create a JOURNAL entry like this:
 | 6   | Finish journal entry.                                            | **"C-c C-c"**                                                                   |
 
 
-#### You need to review and then move the information you have collected to the correct location
+### You need to review and then move the information you have collected to the correct location
 
 One specialty of Org mode is that it stores most types of Org entries (TODO, MEETING, KNOWHOW) in a so-called "refile" file.
 The only exception is the JOURNAL entry because this is only for your eyes only, whereas the refile file is part of the team files and Git repo.
@@ -285,7 +317,7 @@ Once you are happy with that Org entry, you can move it to the main Org file "ar
 Now that you have added a new entry to the final destination file, please directly commit this to the main branch.
 
 
-#### You need to Git commit and push something
+### You need to Git commit and push something
 
 As already mentioned before, I store all the Org files and therefore all the information I collect in Git repos.
 Git is a very powerful version control system, and with everything which is powerful I recommend taking a little extra care about how to use it, especially when working together with others.
@@ -311,14 +343,14 @@ I can just recommend a combination of:
 * IntelliJ IDEA CE and its in-built Git client.
 
 
-### How to find something back which you have documented earlier
+## Scenarios - How to find something back which you have documented earlier
 
 Of course it is nice that you have documented quite some information by applying the scenarios from the previous section.
 But this all does only make sense if you can find back the information quickly.
 For this I describe typical report requests in the following subsections.
 
 
-#### What has happened so far, and what are your concrete tasks in the coming time periods?
+### What has happened so far, and what are your concrete tasks in the coming time periods?
 
 To get an overview of all the meetings and todos which happened so far, as well as the list of all the upcoming tasks, Org mode offers the
 **agenda command**.
@@ -338,7 +370,7 @@ You can open the agenda view and then do an example walk-through through its fea
 In case there are any tasks which have a due date in the currently selected week/day, the agenda view will emphasize them.
 
 
-#### Which (unfinished) tasks are assigned to you at all?
+### Which (unfinished) tasks are assigned to you at all?
 
 In addition to "What do I have to do today" another common question is:
 "What are all the tasks which are assigned to me at all?"
@@ -378,7 +410,7 @@ Nice, isn't it?
 In case you will become part of our team, then we can quickly add such a specific query for you as well!
 
 
-#### What happened so far for a given topic?
+### What happened so far for a given topic?
 
 Besides knowing which tasks are assigned to you and maybe scheduled for the very near future, the other typical situation is that you would like to know what has happened related to a given topic.
 To get the answer, you again use the query view.
@@ -390,7 +422,7 @@ If you want to know what has happened so far related to a mystical topic called 
 If you do not know which tag you would need to enter, please continue reading with the next section.
 
 
-#### Which tags are there at all?
+### Which tags are there at all?
 
 If you just want to get a quick overview of which tags are defined and used at all throughout the whole folder structure, you can also use the
 agenda command for this:
@@ -409,11 +441,3 @@ In addition, you can also check the Org mode configuration file as well to get t
 ----
 
 _Martin Leggewie, 2021-04-24_
-
-_Some meta information about the markdown files I have created for this document:_
-
-* _I use the GitHub flavor of markdown._
-_See [https://guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown) for how to use it._
-
-* _I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor)._
-_See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach._

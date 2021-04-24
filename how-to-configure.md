@@ -1,8 +1,31 @@
 
+<!--
+    Some meta information about this document:
+
+    * I use the GitHub flavor of markdown.
+    See [https://guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown) for how to use it.
+
+    * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
+    See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
+ -->
+
+
 [(back to main page)](README.md)
 
 
 # The Documentation Mode - How to configure
+
+<!-- TOC -->
+
+- [Motivation (or: why do we accept the bulkiness of Emacs and Git?)](#motivation-or-why-do-we-accept-the-bulkiness-of-emacs-and-git)
+- [How to set it all up](#how-to-set-it-all-up)
+    - [How to setup yourself](#how-to-setup-yourself)
+    - [How to setup your computer](#how-to-setup-your-computer)
+        - [Install Git](#install-git)
+        - [Configure Emacs and the included Org](#configure-emacs-and-the-included-org)
+        - [Install Emacs](#install-emacs)
+
+<!-- /TOC -->
 
 If you have read the [How to use](how-to-use.md) part, you are now maybe under the impression that all this is not too easy and fun to apply.
 Having a Trello board or a JIRA project in place might look more intriguing than fiddling around with fancy keyboard shortcuts in a text editor from the last millennium.
@@ -169,11 +192,3 @@ Sorry.)
 ----
 
 _Martin Leggewie, 2021-04-24_
-
-_Some meta information about the markdown files I have created for this document:_
-
-* _I use the GitHub flavor of markdown._
-_See [https://guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown) for how to use it._
-
-* _I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor)._
-_See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach._
