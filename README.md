@@ -13,10 +13,10 @@ These workflows strive to meet the following main requirements:
 
 This tutorial consists of two main parts: 
 
-* [Part 1](how-to-use.md) explains **how to use it**.
+* **[Part 1 explains how to use it](how-to-use.md)**.
 If you first like to know how the workflows work and how they look and feel (and if you are not afraid of reading about a plethora of keyboard shortcuts), then start with this part.
 
-* [Part 2](how-to-configure.md) explains **how to set it all up**.
+* **[Part 2 explains how to set it all up](how-to-configure.md)**.
 If you are interested in which tools you would need to install on your machine, and how to set them up, then have a look here.
 
 Closing note: I have developed this workflow together with a former colleague of mine, and I have used it now for more than a year.
