@@ -1,4 +1,6 @@
 
+[(back to main page)](README.md)
+
 
 # The Documentation Mode - How to configure
 
@@ -162,6 +164,7 @@ But in the end you should see the blank editor window.
 (From my experience there will most likely be problems because Emacs is a complicated beast of software.
 Sorry.)
 
+[(back to main page)](README.md)
 
 ----
 

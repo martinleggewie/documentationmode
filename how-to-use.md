@@ -1,4 +1,6 @@
 
+[(back to main page)](README.md)
+
 
 # The Documentation Mode - How to use
 
@@ -402,6 +404,7 @@ agenda command for this:
 Admittedly, this is presumably not the original idea of this feature, but what the heck!
 In addition, you can also check the Org mode configuration file as well to get the list of all the tags which were intentionally created.
 
+[(back to main page)](README.md)
 
 ----
 

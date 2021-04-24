@@ -19,11 +19,11 @@ If you first like to know how the workflows work and how they look and feel (and
 * **[Part 2 explains how to set it all up](how-to-configure.md)**.
 If you are interested in which tools you would need to install on your machine, and how to set them up, then have a look here.
 
-Closing note: I have developed this workflow together with a former colleague of mine, and I have used it now for more than a year.
-Although developing and getting used to it has been (and sometimes still is) a little bit painful, I use it every day because I always see its strengths.
+Closing note: I have developed these workflows together with a former colleague of mine, and I have used them now for more than a year.
+Although developing and getting used to them has been (and sometimes still is) a little bit painful, I use them every day because I always see their strengths.
 
-Of course I hope that this workflow is something which would also suit your demands.
-But even if you don't want to use it, you maybe can get some inspiration out of it which supports you in case you struggle with your own workflow.
+Of course I hope that these workflows and their underlying tool setup are something which would also suit your demands.
+But even if you don't want to use them, you maybe can get some inspiration out of this tutorial which supports you in case you struggle with your own workflows.
 
 ----
 
