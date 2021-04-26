@@ -100,11 +100,11 @@ And externalizing the configuration is exactly what I have done.
 All configuration is stored in three different Git repos.
 Two repos are meant to be only used by yourself, whereas the third one is used to share information between all team members.
 
-| Repo URL | Type | Location in local file system | Description |
+| Repo URL (github.com/martinleggewie/...) | Type | Location in local file system | Description |
 | :-- | :-- | :-- | :-- |
-| https://github.com/martinleggewie/documentationmode_emacs.d  | Only for you | `~/.emacs.d` | Contains the bootstrap Emacs configuration which mainly contains of only one very short `init.el` file.                    |
-| https://github.com/martinleggewie/documentationmode_org-main | Shared       | `~/org/main` | Contains the Org Mode configuration and all the content relevant for all team members.                                   |
-| https://github.com/martinleggewie/documentationmode_org-user | Only for you | `~/org/user` | Contains the Emacs configuration plus Org Mode configuration and content which you consider to be only relevant for you. |
+| [.../documentationmode_emacs.d](https://github.com/martinleggewie/documentationmode_emacs.d)  | Only for you | `~/.emacs.d` | Contains the bootstrap Emacs configuration which mainly contains of only one very short `init.el` file.                    |
+| [.../documentationmode_org-main](https://github.com/martinleggewie/documentationmode_org-main) | Shared       | `~/org/main` | Contains the Org Mode configuration and all the content relevant for all team members.                                   |
+| [.../documentationmode_org-user](https://github.com/martinleggewie/documentationmode_org-user) | Only for you | `~/org/user` | Contains the Emacs configuration plus Org Mode configuration and content which you consider to be only relevant for you. |
 
 
 As just mentioned in the table above, the `init.el` file is very short.
@@ -145,7 +145,7 @@ Let's have a closer look to the three different configuration files:
     In order to get everything working, you most likely need to configure the following settings:
 
     * `user-full-name`: Contains your first and last name in one string, e.g. "Martin Leggewie".
-    * `org-default-notes-file`: Contains the path to your refile file, e.g. "\~/org/main/refile<sub>ml</sub>.org".
+    * `org-default-notes-file`: Contains the path to your refile file, e.g. "\~/org/main/refile_ml.org".
     * `org-default-journal-file`: Contains the path to your journal file, e.g. "\~/org/user/journal.org".
 
 
