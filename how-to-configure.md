@@ -23,7 +23,7 @@
     - [How to setup your computer](#how-to-setup-your-computer)
         - [Install Git](#install-git)
         - [Configure Emacs and the included Org](#configure-emacs-and-the-included-org)
-        - [Install Emacs](#install-emacs)
+        - [Install and start Emacs](#install-and-start-emacs)
 
 <!-- /TOC -->
 
@@ -100,63 +100,56 @@ And externalizing the configuration is exactly what I have done.
 All configuration is stored in three different Git repos.
 Two repos are meant to be only used by yourself, whereas the third one is used to share information between all team members.
 
-| Repo name       | Type         | Location in local file system | Description                                                                                                                                   |
-|-----------------|--------------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| TODO "emacs.d"  | Only for you | `~/.emacs.d`                  | Contains the basic Emacs configuration which mainly contains only a very short init.el file. Below you will find more information about this. |
-| TODO "personal" | Only for you | `~/personal`                  | Contains that part of the created Org content which you consider to be only relevant for you. This is mainly the journal file.                |
-| TODO "archedl"  | Shared       | `~/professional`              | This is the most important repo because it contains the Org Mode configuration and all the content relevant for all team members.             |
+| Repo URL | Type | Location in local file system | Description |
+| :-- | :-- | :-- | :-- |
+| https://github.com/martinleggewie/documentationmode_emacs.d  | Only for you | `~/.emacs.d` | Contains the bootstrap Emacs configuration which mainly contains of only one very short `init.el` file.                    |
+| https://github.com/martinleggewie/documentationmode_org-main | Shared       | `~/org/main` | Contains the Org Mode configuration and all the content relevant for all team members.                                   |
+| https://github.com/martinleggewie/documentationmode_org-user | Only for you | `~/org/user` | Contains the Emacs configuration plus Org Mode configuration and content which you consider to be only relevant for you. |
 
-_TODO: Once I have setup the three demo Git repos, I will add the GitHub links here._
 
-----
-
-As a preparation for this document, I have written some overview to get this configuration structure explained in a slightly different way:
-
-![Emacs configuration structure](emacs-configuration-structure.jpg)
-
-----
-
-As just mentioned in the table above, the init.el file is very short.
-In fact, this file does nothing more than load three more configuration files:
+As just mentioned in the table above, the `init.el` file is very short.
+In fact, this file does nothing more than loading three other configuration files:
 
 * `~/.emacs.d/emacs-user-configuration.org`
-* `~/.emacs.d/orgmode-common-configuration.org `
+* `~/.emacs.d/orgmode-main-configuration.org`
 * `~/.emacs.d/orgmode-user-configuration.org`
 
 As the `~/.emacs.d` Git repo does not contain these files itself, you need to provide them by yourself.
+But fear not, the files are very close by.
 
-1.  emacs-user-configuration.org
+The main idea is that you store and keep these three configuration files in the ´./cfg´ subfolders inside the other two Git repos because then you can share the configuration with your other team members.
+This is especially helpful for `orgmode-main-configuration.org` as it is this file where I have specified the Org Mode templates, tags, agenda and some more settings on which the team would need to agree on.
 
-    As the file name maybe implies, this file is meant to contain that part of the general Emacs configuration to follow your wishes.
-    Main requirement is that you store the configuration in the "descriptive programming way" so that Emacs can load the files using the babel package.
-    If you right now don't know what I am talking about, just contact me so that I can provide you my current configuration as a good starting point.
+But at the moment Emacs cannot load these files because they are not yet at their intended location.
+To solve this, we use the operating system's symbolic link feature to symlink each of these three files to the location where Emacs looks for them.
+The `~/.emacs.d` Git repo stores small batch scripts which execute the needed symlink commands.
 
-    Independently on how you define your Emacs configuration, I can only recommend storing this configuration file somewhere else in another Git repo.
-    One typical pattern is to have another separate Git repo called "dotfiles" where you would store the real source of your Emacs configuration file.
-    Independently on where you store the file with whatever name:
-    In the end you only need to symlink your configuration file to `~/.emacs.d/emacs-user-configuration.org` so that Emacs can find and load it during starting phase.
+Let's have a closer look to the three different configuration files:
 
-2.  orgmode-common-configuration
+1.  `emacs-user-configuration.org` (stored in `~/org/user/cfg/emacs-user-configuration.org`)
 
-    Here you don't have that much freedom on how this configuration should look like and where you store it.
-    This `/.emacs.d/orgmode-common-configuration.org` file contains that part of the Org mode configuration which is relevant for the whole team.
-    The true source of this file is supposed to be `~/professional/config/orgmode-configuration.org`, and you automatically got this file when you have cloned the "professional" Git repo.
-    The only thing missing is that you also symlink this file to `~/.emacs.d/orgmode-common-configuration.org`.
+    As its name maybe implies, this file contains personal Emacs configuration which makes Emacs usable in the context of Org Mode.
+    Like with all the other configuration files the Git repos contain, I have stored the Emacs configuration in the "descriptive programming way".
+    I have provided some explanation for each of the configuration settings so that I have a real chance to still understand all these settings after a month or so.
+    And because the configuration file itself is also an Org Mode file, you can export the whole content (for example) as an HTML file, using Org Mode's export feature.
+    In order to enable Emacs to directly load the configuration, I have specified in the `init.el` to use the so-called babel package.
 
-3.  orgmode-user-configuration.org
+2.  `orgmode-main-configuration.org` (stored in `~/org/main/cfg/orgmode-main-configuration.org`)
+
+    This file contains that part of the Org mode configuration which is relevant for the whole team.
+    Therefore you don't have that much freedom on how this configuration should look like and where you store it.
+
+3.  `orgmode-user-configuration.org` (stored in `~/org/user/cfg/orgmode-user-configuration.org`)
 
     Not all parts of the Org mode configuration is suitable to be stored in the shared Git repo for the whole team.
     In order to get everything working, you most likely need to configure the following settings:
 
     * `user-full-name`: Contains your first and last name in one string, e.g. "Martin Leggewie".
-    * `org-default-notes-file`: Contains the path to your refile file, e.g. "\~/professional/refile<sub>ml</sub>.org".
-    * `org-default-journal-file`: Contains the path to your journal file, e.g. "\~/personal/journal.org".
-
-    Again, it makes sense that you store the corresponding configuration file in another Git repo (e.g. "dotfiles").
-    Then just symlink it to `~/.emacs.d/orgmode-user-configuration.org`.
+    * `org-default-notes-file`: Contains the path to your refile file, e.g. "\~/org/main/refile<sub>ml</sub>.org".
+    * `org-default-journal-file`: Contains the path to your journal file, e.g. "\~/org/user/journal.org".
 
 
-#### Install Emacs
+#### Install and start Emacs
 
 There is not much to say about this requirement.
 
@@ -191,4 +184,4 @@ Sorry.)
 
 ----
 
-_Martin Leggewie, 2021-04-24_
+_Martin Leggewie, 2021-04-26_
