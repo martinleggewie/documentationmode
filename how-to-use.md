@@ -192,37 +192,58 @@ The work assigned to this task has been done, and we need to close it so that we
 But there are also some other types of changes which can happen.
 In this section we describe how we document all these types of changes.
 
-1. We start working
+#### We start working
 
-    * Change the Org entry type from its previous value (e.g., "TODO") to "INPROGRESS".
+* Change the Org entry type from its previous value (e.g., "TODO") to "INPROGRESS".
+You don't have to manually change the entry type text.
+Instead you can use the **"S-LEFT"** and/or **"S-RIGHT"** keyboard shortcuts to do so.
 
-2. Some intermediate work has been done
+#### Some intermediate work has been done
 
-    * Add some more bullet points to the "Description" to add information about the progress.
+* Add some more bullet points to the "Description" to add information about the progress.
+Typically, you would add these bullet points to the "Result" section.
 
-3. Someone else outside our team needs to do the work
+* In addition, you can start each new entry with a date entry which Org does NOT consider in its agenda logic.
+Use keyboard shortcut **C-c !** to get the date picker shown, then select the correct date with  **"S-LEFT"**, **"S-RIGHT"**, **"S-UP"**, or **"S-DOWN"**,, and then press **"RET"**.
+You will see that Org writes something like "`[2021-06-19 Sa]`" instead of "`<2021-06-19 Sa>`".
+Note the difference in the brackets.
 
-    * Change the Org entry type from its previous value (e.g. "TODO") to "WAITING".
-    * Add the name of the outside person who is supposed to work on the task next or below "Description".
+#### Someone else outside our team needs to do the work
 
-    Even when someone else outside the team has to do the actual work, it is still our responsibility to keep track of it.
-    The responsibility for this task stays with the team member whose person tag is assigned to the task.
+Even when someone else outside the team has to do the actual work, it is still our responsibility to keep track of it.
+The responsibility for this task stays with the team member whose person tag is assigned to the task.
+We keep track of this with the following two steps:
 
-4.  The deadline has passed, but the work is still not yet done
+* Change the Org entry type from its previous value (e.g. "TODO") to "WAITING".
+Again, you don't have to manually change the entry type text.
+Instead you can use the **"S-LEFT"** and/or **"S-RIGHT"** keyboard shortcuts to do so.
 
-    Yeah, something like this should not happen, but it will.
-    We accept reality, and we dare to move the DEADLINE date to a new date.
-    Place the cursor to the day, month, or year, and change the value with "S-UP" or "S-DOWN".
+* Add the name of the outside person who is supposed to work on the task next or below "Description", typically in the "Next steps" section.
 
-5.  The work has been done
 
-    * Change the Org entry type from its previous value (e.g., "TODO") to "DONE".
+#### The deadline has passed, but the work is still not yet done
 
-    _In addition, we silently shout "Hurray!" because we feel satisfaction that we managed to accomplish something._
+Yeah, something like this should not happen, but it will.
+We accept reality, and we dare to move the DEADLINE date to a new date.
 
-6.  The work is not needed anymore
+* Place the cursor to the day, month, or year, and change the value with **"S-LEFT"**, **"S-RIGHT"**, **"S-UP"**, or **"S-DOWN"**, then **"RET"**  
 
-    * Change the Org entry type from its previous value (e.g., "TODO") to "CANCELLED".
+
+#### The work has been done
+
+We silently shout "Hurray!" because we feel satisfaction that we managed to accomplish something.
+
+* Change the Org entry type from its previous value (e.g., "TODO") to "DONE".
+And again, you don't have to manually change the entry type text.
+Instead you can use the **"S-LEFT"** and/or **"S-RIGHT"** keyboard shortcuts to do so.
+
+
+#### The work is not needed anymore
+
+* Change the Org entry type from its previous value (e.g., "TODO") to "CANCELLED".
+By now you should know what will come now:
+You don't have to manually change the entry type text.
+Instead you can use the **"S-LEFT"** and/or **"S-RIGHT"** keyboard shortcuts to do so.
 
 
 ### A meeting happens or has happened
