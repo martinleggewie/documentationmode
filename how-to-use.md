@@ -64,7 +64,10 @@ So yes, calling this a mode is an intended pun related to Emacs and its modes.
 To be more concrete about the used tooling:
 
 * The tooling is based on **Emacs** and the so-called **"Org Mode"** which enriches Emacs with a huge feature set for planning tasks.
+![Emacs main window](images/screenshot_emacs_main.png)
+
 * Along with Emacs and Org Mode, I use **Git** to both create backups and synchronize all the content between the team members.
+![Terminal showing Git output](images/screenshot_terminal_git-status.png)
 
 In the [other part of this document](how-to-configure.md) you will find information about how to
 configure all this.
@@ -142,6 +145,8 @@ Most likely this is the most useful and used scenario:
 Someone (most likely: you) needs to perform a task.
 Now you need to note down the details in such a way that you can use the tooling to keep track of the task's progress.
 
+To do so, perform the following steps:
+
 | No. | Step description                                                                | Shortcut                                                                                        |
 |-----|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | 1   | Create new todo entry.                                                          | **"C-c c"**, then **"t"**                                                                       |
@@ -155,6 +160,29 @@ Now you need to note down the details in such a way that you can use the tooling
 | 9   | Assign system tag (optional).                                                   | **"C-c C-q"**, then type "sys\_", then use "TAB" for autocompletion, select the tag, then "RET" |
 | 10  | Assign person tag.                                                              | **"C-c C-q"**, then type "prs\_", then use "TAB" for autocompletion, select the tag, then "RET" |
 | 11  | Finish todo entry.                                                              | **"C-c C-c"**                                                                                   |
+
+----
+
+**Example flow**
+
+The following example flow of screenshots might give you a better impression on what is going on.
+Please note that the screenshots are not one-to-one mapped to the steps describes above.
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_01.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_02.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_03.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_04.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_05.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_06.png)
+
+![Emacs main window](images/screenshot_emacs_scenario-schedule-new-task_07.png)
+
+----
 
 
 ### An already scheduled task has changed and needs documentation update
@@ -440,4 +468,4 @@ In addition, you can also check the Org mode configuration file as well to get t
 
 ----
 
-_Martin Leggewie, 2021-04-24_
+_Martin Leggewie, 2021-06-19_
