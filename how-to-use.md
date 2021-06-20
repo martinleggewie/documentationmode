@@ -7,6 +7,8 @@
 
     * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
     See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
+
+    * Most parts of this whole article I have written with Visual Studio Code, benefitting from its in-built Markdown support. To get the table of content created automically, I have added the extension "alanwalk.markdown-toc". So, in case you would like to change something in the structure of this article, please consider using this extension as well to keep the toc consistent with the content.
  -->
 
 
@@ -22,6 +24,12 @@
 - [Scenarios - How to document something](#scenarios---how-to-document-something)
     - [You have to schedule a new task](#you-have-to-schedule-a-new-task)
     - [An already scheduled task has changed and needs documentation update](#an-already-scheduled-task-has-changed-and-needs-documentation-update)
+        - [We start working](#we-start-working)
+        - [Some intermediate work has been done](#some-intermediate-work-has-been-done)
+        - [Someone else outside our team needs to do the work](#someone-else-outside-our-team-needs-to-do-the-work)
+        - [The deadline has passed, but the work is still not yet done](#the-deadline-has-passed-but-the-work-is-still-not-yet-done)
+        - [The work has been done](#the-work-has-been-done)
+        - [The work is not needed anymore](#the-work-is-not-needed-anymore)
     - [A meeting happens or has happened](#a-meeting-happens-or-has-happened)
     - [A meeting is about to happen in the near future, and you need to note done some topics for this meeting](#a-meeting-is-about-to-happen-in-the-near-future-and-you-need-to-note-done-some-topics-for-this-meeting)
     - [Some know-how information arrives](#some-know-how-information-arrives)
@@ -489,4 +497,4 @@ In addition, you can also check the Org mode configuration file as well to get t
 
 ----
 
-_Martin Leggewie, 2021-06-19_
+_Martin Leggewie, 2021-06-20_
