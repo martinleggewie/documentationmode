@@ -19,7 +19,7 @@
 
 <!-- TOC -->
 
-- [Motivation (or: why do we accept the bulkiness of Emacs and Git?)](#motivation-or-why-do-we-accept-the-bulkiness-of-emacs-and-git)
+- [Motivation or: why do we accept the bulkiness of Emacs and Git?](#motivation-or-why-do-we-accept-the-bulkiness-of-emacs-and-git)
 - [How to set it all up](#how-to-set-it-all-up)
     - [How to setup yourself](#how-to-setup-yourself)
     - [How to setup your computer](#how-to-setup-your-computer)
@@ -90,7 +90,7 @@ To get documentation mode rules up and running on your computer, you need to pre
 
 As you will learn in a few moments, we use Git repos as the backbone of the communication between the team members.
 Therefore you need to have a not too old version of Git installed – nothing special about this.
-At the time of writing this text, I used Git version 2.27.0 on MacOS.
+At the time of writing this text, I used Git version 2.33.0 on MacOS.
 
 
 #### Configure Emacs and the included Org
@@ -99,6 +99,11 @@ You will be using Emacs and the included so-called "Org major mode" for most of 
 Unfortunately, Emacs and especially Org mode are quite configuration-heavy.
 Fortunately, Emacs is structured in such an open and extensible way that it is possible to have the needed configuration externalized in files and folders.
 And externalizing the configuration is exactly what I have done.
+
+Before I go into more details about this, have a look at the following diagram which shows all the participating folder, files, Git repositories, and how they are related:
+
+![configuration](images/diagram_gitrepos-folders-files_configuration.png)
+
 All configuration is stored in three different Git repos.
 Two repos are meant to be only used by yourself, whereas the third one is used to share information between all team members.
 
@@ -182,8 +187,15 @@ But in the end you should see the blank editor window.
 (From my experience there will most likely be problems because Emacs is a complicated beast of software.
 Sorry.)
 
+The following diagram shows which parts of the whole configuration of files and folders Emacs reads and writes during startup and runtime of Emacs.
+
+![startup and runtime](images/diagram_gitrepos-folders-files_startup-and-runtime.png)
+
+For example, the Git repos are not at all relevant if you just want to use Emacs and Orgmode.
+And you can also see that Emacs only checks the symbolically linked configuration files, not the configuration files themselves.
+
 [(back to main page)](README.md)
 
 ----
 
-_Martin Leggewie, 2021-06-20_
+_Martin Leggewie, 2021-10-17_
